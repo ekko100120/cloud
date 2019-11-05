@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- log4j 转 slf4j 工具 https://logback.qos.ch/translator/-->
+<!-- For assistance related to logback-translator or configuration  -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user             -->
+<!--                                                                -->
+<!-- For professional support please see                            -->
+<!--    http://www.qos.ch/shop/products/professionalSupport         -->
+<!--                                                                -->
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!--<pattern>[%d{HH:mm:ss}] %5p [%t] - %m%n</pattern>-->
+            <!--<pattern>[%d{HH:mm:ss}] [%thread] %-5level %logger{36}:%line -&ndash;&gt; %msg%n</pattern>-->
+            <pattern>%black([kenny@macbookpro]) %red([%d{MM-dd HH:mm:ss}]) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger{10}) - %cyan(%msg%n)</pattern>
+        </encoder>
+    </appender>
+    <root level="DEBUG">
+        <appender-ref ref="stdout"/>
+    </root>
+</configuration>
